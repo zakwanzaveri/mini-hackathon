@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Request - HelpHub AI</title>
+    <link rel="stylesheet" href="create-request.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <a href="home.html" class="logo">H</a>
+                <span class="logo-text">HelpHub AI</span>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="explore.html" class="nav-link">Explore</a>
+                <a href="create-request.html" class="nav-link active">Create Request</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <span class="hero-label">CREATE REQUEST</span>
+                <h1 class="hero-title">Turn a rough problem into a clear help request.</h1>
+                <p class="hero-description">Use built-in AI suggestions for category, urgency, tags, and a stronger
+                    description rewrite.</p>
+            </div>
+        </section>
+
+        <!-- Content Wrapper -->
+        <div class="content-wrapper">
+            <!-- Left Column - Form -->
+            <section class="form-section">
+                <form class="request-form">
+                    <!-- Title Field -->
+                    <div class="form-group">
+                        <label class="form-label">Title</label>
+                        <input type="text" class="form-input form-input-text"
+                            placeholder="Need review on my JavaScript quiz app before submission">
+                    </div>
+
+                    <!-- Description Field -->
+                    <div class="form-group">
+                        <label class="form-label">Description</label>
+                        <textarea class="form-input form-input-textarea"
+                            placeholder="Explain the challenge, your current progress, deadline, and what kind of help would be useful."
+                            rows="6"></textarea>
+                    </div>
+
+                    <!-- Tags and Category Row -->
+                    <div class="form-row">
+                        <div class="form-group flex-1">
+                            <label class="form-label">Tags</label>
+                            <input type="text" class="form-input form-input-text"
+                                placeholder="JavaScript, Debugging, Review">
+                        </div>
+                        <div class="form-group flex-1">
+                            <label class="form-label">Category</label>
+                            <select class="form-input form-input-select">
+                                <option>Web Development</option>
+                                <option>Design</option>
+                                <option>Career</option>
+                                <option>Mobile Development</option>
+                                <option>Data Science</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Urgency -->
+                    <div class="form-group">
+                        <label class="form-label">Urgency</label>
+                        <select class="form-input form-input-select">
+                            <option>High</option>
+                            <option>Medium</option>
+                            <option>Low</option>
+                        </select>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="form-buttons">
+                        <button type="button" class="btn-secondary">Apply AI suggestions</button>
+                        <button type="submit" class="btn-primary">Publish request</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Right Column - AI Assistant -->
+            <aside class="ai-assistant-section">
+                <div class="ai-assistant-box">
+                    <span class="ai-label">AI ASSISTANT</span>
+                    <h2 class="ai-title">Smart request guidance</h2>
+
+                    <!-- Suggested Category -->
+                    <div class="ai-suggestion">
+                        <div class="suggestion-label">Suggested category</div>
+                        <div class="suggestion-value">Community</div>
+                    </div>
+
+                    <!-- Detected Urgency -->
+                    <div class="ai-suggestion">
+                        <div class="suggestion-label">Detected urgency</div>
+                        <div class="suggestion-value">Low</div>
+                    </div>
+
+                    <!-- Suggested Tags -->
+                    <div class="ai-suggestion">
+                        <div class="suggestion-label">Suggested tags</div>
+                        <div class="suggestion-prompt">Add more detail for smarter tags</div>
+                    </div>
+
+                    <!-- Rewrite Suggestion -->
+                    <div class="ai-suggestion">
+                        <div class="suggestion-label">Rewrite suggestion</div>
+                        <div class="suggestion-prompt">Start describing the challenge to generate a stronger version.
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+</body>
+
+</html>

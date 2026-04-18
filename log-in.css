@@ -1,0 +1,277 @@
+/* =============================================================
+   LOGIN — HelpHub AI  |  Pixel-accurate recreation
+   ============================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --page-bg: #edeae3;
+    /* warm cream background */
+    --left-bg: #1a2e2a;
+    /* deep dark teal */
+    --right-bg: #f5f3ee;
+    /* near-white card */
+
+    --font: 'Inter', sans-serif;
+
+    /* Left panel */
+    --left-title: #ffffff;
+    --left-body: rgba(255, 255, 255, 0.62);
+    --left-eyebrow: rgba(255, 255, 255, 0.42);
+    --left-bullet: rgba(255, 255, 255, 0.70);
+
+    /* Right panel */
+    --right-eyebrow: #2d7a6e;
+    --right-title: #191e1e;
+    --label-color: #3a3f3f;
+    --input-bg: #ffffff;
+    --input-border: #d4d0c8;
+    --input-text: #191e1e;
+    --input-radius: 8px;
+    --btn-bg: #2ab3a3;
+    /* teal CTA button */
+    --btn-hover: #229990;
+    --btn-text: #ffffff;
+
+    --r-outer: 20px;
+    --r-panel: 18px;
+}
+
+/* ── BASE ─────────────────────────────────────────────────── */
+body {
+    font-family: var(--font);
+    background: var(--page-bg);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 40px 24px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ── PAGE WRAPPER ─────────────────────────────────────────── */
+.page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ── LOGIN WRAPPER (the two-panel card) ───────────────────── */
+.login-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.18fr;
+    width: 100%;
+    max-width: 900px;
+    border-radius: var(--r-outer);
+    overflow: hidden;
+    box-shadow: 0 8px 48px 0 rgba(20, 35, 30, .14);
+}
+
+@media (max-width: 680px) {
+    .login-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .left-panel {
+        border-radius: var(--r-outer) var(--r-outer) 0 0;
+    }
+
+    .right-panel {
+        border-radius: 0 0 var(--r-outer) var(--r-outer);
+    }
+}
+
+/* ── LEFT PANEL ───────────────────────────────────────────── */
+.left-panel {
+    background: var(--left-bg);
+    padding: 52px 44px 52px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.left-panel__eyebrow {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    color: var(--left-eyebrow);
+    margin-bottom: 20px;
+}
+
+.left-panel__title {
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--left-title);
+    line-height: 1.14;
+    letter-spacing: -0.026em;
+    margin-bottom: 22px;
+}
+
+.left-panel__desc {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--left-body);
+    line-height: 1.65;
+    margin-bottom: 26px;
+}
+
+.left-panel__list {
+    list-style: disc;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.left-panel__list li {
+    font-size: 12.5px;
+    font-weight: 400;
+    color: var(--left-bullet);
+    line-height: 1.55;
+    padding-left: 2px;
+}
+
+.left-panel__list li::marker {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 10px;
+}
+
+/* ── RIGHT PANEL ──────────────────────────────────────────── */
+.right-panel {
+    background: var(--right-bg);
+    padding: 52px 44px 52px;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-panel__eyebrow {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    color: var(--right-eyebrow);
+    margin-bottom: 14px;
+}
+
+.right-panel__title {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--right-title);
+    line-height: 1.18;
+    letter-spacing: -0.024em;
+    margin-bottom: 30px;
+}
+
+/* ── FORM ─────────────────────────────────────────────────── */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.form-label {
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--label-color);
+    letter-spacing: 0.01em;
+}
+
+/* Select wrapper — positions the custom arrow */
+.select-wrap {
+    position: relative;
+}
+
+.form-select {
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: var(--input-radius);
+    padding: 11px 38px 11px 14px;
+    font-family: var(--font);
+    font-size: 13.5px;
+    font-weight: 400;
+    color: var(--input-text);
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+.form-select:focus {
+    border-color: #2ab3a3;
+}
+
+/* custom chevron */
+.select-arrow {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #888;
+    pointer-events: none;
+    line-height: 1;
+}
+
+/* Email + Password side by side */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.form-input {
+    width: 100%;
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: var(--input-radius);
+    padding: 11px 14px;
+    font-family: var(--font);
+    font-size: 13.5px;
+    font-weight: 400;
+    color: var(--input-text);
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+.form-input:focus {
+    border-color: #2ab3a3;
+}
+
+/* ── SUBMIT BUTTON ────────────────────────────────────────── */
+.btn-submit {
+    width: 100%;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    border-radius: 10px;
+    padding: 15px 24px;
+    font-family: var(--font);
+    font-size: 14.5px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    transition: background 0.18s;
+    margin-top: 4px;
+}
+
+.btn-submit:hover {
+    background: var(--btn-hover);
+}
+
+.btn-submit:active {
+    background: #1d8a7c;
+}

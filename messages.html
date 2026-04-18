@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - HelpHub AI</title>
+    <link rel="stylesheet" href="messages.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <a href="home.html" class="logo">H</a>
+                <span class="logo-text">HelpHub AI</span>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="explore.html" class="nav-link">Explore</a>
+                <a href="messages.html" class="nav-link active">Messages</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <span class="hero-label">INTERACTION / MESSAGING</span>
+                <h1 class="hero-title">Keep support moving through direct communication.</h1>
+                <p class="hero-description">Basic messaging gives helpers and requesters a clear follow-up path once a
+                    match happens.</p>
+            </div>
+        </section>
+
+        <!-- Content Wrapper -->
+        <div class="content-wrapper">
+            <!-- Left Column - Conversation Stream -->
+            <section class="conversation-section">
+                <div class="section-header">
+                    <span class="section-label">CONVERSATION STREAM</span>
+                    <h2 class="section-title">Recent messages</h2>
+                </div>
+
+                <div class="messages-list">
+                    <!-- Message Item 1 -->
+                    <div class="message-item">
+                        <div class="message-header">
+                            <h3 class="message-participants">Ayesha Khan — Sara Noor</h3>
+                            <span class="message-time">09:45 AM</span>
+                        </div>
+                        <p class="message-text">I checked your portfolio request. Share the breakpoint screenshots and I
+                            can suggest fixes.</p>
+                    </div>
+
+                    <!-- Message Item 2 -->
+                    <div class="message-item">
+                        <div class="message-header">
+                            <h3 class="message-participants">Hassan Ali — Ayesha Khan</h3>
+                            <span class="message-time">11:10 AM</span>
+                        </div>
+                        <p class="message-text">Your event poster concept is solid. I would tighten the CTA and reduce
+                            the background texture.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Column - Send Message -->
+            <section class="composer-section">
+                <div class="section-header">
+                    <span class="section-label">SEND MESSAGE</span>
+                    <h2 class="section-title">Start a conversation</h2>
+                </div>
+
+                <form class="message-form">
+                    <!-- To Field -->
+                    <div class="form-group">
+                        <label class="form-label">To</label>
+                        <select class="form-input form-select">
+                            <option>Ayesha Khan</option>
+                            <option>Sara Noor</option>
+                            <option>Hassan Ali</option>
+                            <option>Other User</option>
+                        </select>
+                    </div>
+
+                    <!-- Message Field -->
+                    <div class="form-group flex-grow">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-input form-textarea"
+                            placeholder="Share support details, ask for files, or suggest next steps."
+                            rows="8"></textarea>
+                    </div>
+
+                    <!-- Send Button -->
+                    <button type="submit" class="btn-send">Send</button>
+                </form>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

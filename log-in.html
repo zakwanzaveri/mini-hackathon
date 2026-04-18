@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HelpHub AI — Login</title>
+    <link rel="stylesheet" href="log-in.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="login-wrapper">
+
+            <!-- ── LEFT PANEL ── -->
+            <div class="left-panel">
+                <p class="left-panel__eyebrow">COMMUNITY ACCESS</p>
+                <h1 class="left-panel__title">Enter the support network.</h1>
+                <p class="left-panel__desc">Choose a demo identity, set your role, and jump into a multi-page product
+                    flow designed for asking, offering, and tracking help with a premium interface.</p>
+                <ul class="left-panel__list">
+                    <li>Role-based entry for Need Help, Can Help, or Both</li>
+                    <li>Direct path into dashboard, requests, AI Center, and community feed</li>
+                    <li>Persistent demo session powered by LocalStorage</li>
+                </ul>
+            </div>
+
+            <!-- ── RIGHT PANEL ── -->
+            <div class="right-panel">
+                <p class="right-panel__eyebrow">LOGIN / SIGNUP</p>
+                <h2 class="right-panel__title">Authenticate your community profile</h2>
+
+                <div class="form">
+
+                    <div class="form-group">
+                        <label class="form-label" for="demo-user">Select demo user</label>
+                        <div class="select-wrap">
+                            <select class="form-select" id="demo-user">
+                                <option>Ayesha Khan</option>
+                                <option>Hassan Ali</option>
+                                <option>Sara Noor</option>
+                            </select>
+                            <span class="select-arrow">&#8964;</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="role">Role selection</label>
+                        <div class="select-wrap">
+                            <select class="form-select" id="role">
+                                <option>Both</option>
+                                <option>Need Help</option>
+                                <option>Can Help</option>
+                            </select>
+                            <span class="select-arrow">&#8964;</span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email</label>
+                            <input class="form-input" type="email" id="email" value="community@helphub.ai" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="password">Password</label>
+                            <input class="form-input" type="password" id="password" value="password" />
+                        </div>
+                    </div>
+
+                    <button class="btn-submit">Continue to dashboard</button>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

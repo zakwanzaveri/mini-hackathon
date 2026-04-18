@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #108E83;
+    --primary-dark: #108E83;
+    --primary-light: #108E83;
+    --bg-main: #f5f3f0;
+    --bg-card: rgba(255, 255, 255, 0.85);
+    --bg-dark: #2a3a3a;
+    --bg-dark-lighter: #3a4a4a;
+    --text-dark: #1a1a1a;
+    --text-gray: #5a5a5a;
+    --text-light: #8a8a8a;
+    --border: #e0ddd8;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f3f0 0%, #faf8f5 50%, #f5f3f0 100%);
+    color: var(--text-dark);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+.header {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+.logo-text {
+    font-weight: 600;
+    color: var(--text-dark);
+    white-space: nowrap;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    flex: 1;
+    justify-content: flex-start;
+    margin-left: 3rem;
+}
+
+.nav-link {
+    color: var(--text-gray);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+    color: var(--text-dark);
+}
+
+.nav-link.active {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+}
+
+/* Main Container */
+.main-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 2rem 3rem;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-dark-lighter) 100%);
+    border-radius: 1.5rem;
+    padding: 3rem;
+    color: white;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero-label {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero-description {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    max-width: 900px;
+}
+
+/* Notifications Section */
+.notifications-section {
+    background: var(--bg-card);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Section Header */
+.section-header {
+    margin-bottom: 2rem;
+}
+
+.section-label {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+/* Notifications List */
+.notifications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.notification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 1.75rem;
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.notification-item:hover {
+    background: rgba(23, 184, 168, 0.02);
+}
+
+.notification-body {
+    flex: 1;
+}
+
+.notification-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.notification-meta {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.notification-status {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.4rem 0.9rem;
+    border-radius: 0.4rem;
+    text-transform: capitalize;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.notification-status.unread {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.notification-status.read {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    .nav-menu {
+        margin-left: 0;
+        gap: 1rem;
+    }
+
+    .hero-section {
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .notifications-section {
+        padding: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .notification-item {
+        padding: 1.25rem;
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .notification-status {
+        align-self: flex-start;
+    }
+
+    .notification-title {
+        font-size: 0.95rem;
+    }
+
+    .notification-meta {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        padding: 0.75rem 1rem;
+    }
+
+    .logo {
+        width: 35px;
+        height: 35px;
+        font-size: 1.1rem;
+        text-decoration: none;
+    }
+
+    .logo-text {
+        font-size: 0.9rem;
+    }
+
+    .nav-menu {
+        gap: 0.75rem;
+    }
+
+    .nav-link {
+        font-size: 0.8rem;
+    }
+
+    .main-container {
+        padding: 1rem 1rem 2rem;
+    }
+
+    .hero-section {
+        padding: 1.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .hero-label {
+        font-size: 0.65rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .hero-title {
+        font-size: 1.4rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+    }
+
+    .notifications-section {
+        padding: 1.25rem;
+    }
+
+    .section-label {
+        font-size: 0.65rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .notification-item {
+        padding: 1rem;
+        gap: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .notification-title {
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .notification-meta {
+        font-size: 0.75rem;
+    }
+
+    .notification-status {
+        font-size: 0.7rem;
+        padding: 0.35rem 0.75rem;
+    }
+}

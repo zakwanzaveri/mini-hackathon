@@ -1,0 +1,360 @@
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --page-bg: #e8e5de;
+    /* warm sandy off-white */
+    --card-bg: #f3f1eb;
+    /* card surface */
+    --white: #ffffff;
+
+    --hero-bg: #252e2e;
+    /* dark teal-charcoal hero */
+
+    --font: 'Inter', sans-serif;
+    --text-primary: #191e1e;
+    --text-muted: #6b7070;
+    --eyebrow-teal: #3d8b82;
+
+    --avatar-teal: #3d8b82;
+    --avatar-charcoal: #2b3333;
+    --avatar-orange: #d97a3a;
+
+    --bar-amber: #c98a1a;
+    --bar-teal: #2d7a6e;
+    --bar-track: #d5d1c8;
+
+    --border: #dbd7cf;
+    --card-shadow: 0 2px 16px 0 rgba(20, 30, 30, .08);
+    --item-shadow: 0 1px 4px 0 rgba(20, 30, 30, .06);
+
+    --r-card: 16px;
+    --r-item: 10px;
+    --r-pill: 999px;
+
+    /* Active nav pill — teal filled */
+    --nav-active-bg: #2d6e68;
+    --nav-active-color: #ffffff;
+}
+
+/* ── BASE ─────────────────────────────────────────────────── */
+body {
+    font-family: var(--font);
+    background: var(--page-bg);
+    color: var(--text-primary);
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ── NAVIGATION ───────────────────────────────────────────── */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* brand LEFT, links RIGHT */
+    padding: 0 40px;
+    height: 60px;
+    background: var(--page-bg);
+}
+
+/* Brand */
+.nav__brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+}
+
+.nav__logo {
+    width: 32px;
+    height: 32px;
+    background: var(--avatar-teal);
+    color: #fff;
+    border-radius: 9px;
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+/* Links — pushed to the right by justify-content:space-between */
+.nav__links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.nav__link {
+    font-size: 13.5px;
+    font-weight: 400;
+    color: var(--text-muted);
+    padding: 6px 15px;
+    border-radius: var(--r-pill);
+    transition: color 0.15s;
+    white-space: nowrap;
+}
+
+.nav__link:hover {
+    color: var(--text-primary);
+}
+
+/* Active pill: teal background, white text — matches screenshot */
+.nav__link--active {
+    background: var(--nav-active-bg);
+    color: var(--nav-active-color);
+    font-weight: 500;
+    padding: 6px 15px;
+}
+
+/* Thin separator line below nav */
+.nav-divider {
+    height: 1px;
+    background: #ccc9c0;
+    margin: 0 40px;
+    opacity: 0.6;
+}
+
+/* ── MAIN ─────────────────────────────────────────────────── */
+.main {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 28px 40px 64px;
+}
+
+/* ── HERO ─────────────────────────────────────────────────── */
+.hero {
+    background: var(--hero-bg);
+    border-radius: var(--r-card);
+    padding: 42px 48px 38px;
+    margin-bottom: 26px;
+}
+
+.hero__eyebrow {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    color: rgba(255, 255, 255, 0.40);
+    margin-bottom: 15px;
+}
+
+.hero__title {
+    font-size: 40px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.16;
+    letter-spacing: -0.026em;
+    margin-bottom: 15px;
+}
+
+.hero__sub {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.46);
+    line-height: 1.65;
+    max-width: 560px;
+}
+
+/* ── CARDS GRID ───────────────────────────────────────────── */
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+@media (max-width: 680px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── CARD ─────────────────────────────────────────────────── */
+.card {
+    background: var(--card-bg);
+    border: 1px solid rgba(196, 192, 183, 0.5);
+    border-radius: var(--r-card);
+    padding: 28px 24px 30px;
+    box-shadow: var(--card-shadow);
+}
+
+.card__eyebrow {
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    color: var(--eyebrow-teal);
+    margin-bottom: 7px;
+}
+
+.card__title {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.026em;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+/* ── RANK LIST ────────────────────────────────────────────── */
+.rank-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rank-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--r-item);
+    padding: 14px 16px 14px 14px;
+    box-shadow: var(--item-shadow);
+}
+
+/* Avatars */
+.rank-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+    letter-spacing: 0.02em;
+}
+
+.rank-avatar--teal {
+    background: var(--avatar-teal);
+}
+
+.rank-avatar--charcoal {
+    background: var(--avatar-charcoal);
+}
+
+.rank-avatar--orange {
+    background: var(--avatar-orange);
+}
+
+.rank-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    min-width: 0;
+}
+
+.rank-name {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.rank-skills {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+.rank-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1px;
+    flex-shrink: 0;
+}
+
+.rank-score {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.rank-contribs {
+    font-size: 11.5px;
+    font-weight: 400;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+/* ── BADGE LIST ───────────────────────────────────────────── */
+.badge-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.badge-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--r-item);
+    padding: 15px 17px 17px;
+    box-shadow: var(--item-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.badge-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.badge-roles {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin-bottom: 9px;
+    line-height: 1.45;
+}
+
+/* ── TRUST BAR ────────────────────────────────────────────── */
+/* Two-segment bar: short amber + longer teal, on grey track */
+.trust-bar {
+    display: flex;
+    height: 7px;
+    background: var(--bar-track);
+    border-radius: var(--r-pill);
+    overflow: hidden;
+    width: 100%;
+}
+
+.trust-bar__amber {
+    height: 100%;
+    background: var(--bar-amber);
+    flex-shrink: 0;
+}
+
+.trust-bar__teal {
+    height: 100%;
+    background: var(--bar-teal);
+    flex-shrink: 0;
+}

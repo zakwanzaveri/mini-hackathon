@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HelpHub AI — AI Center</title>
+    <link rel="stylesheet" href="ai-center.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- ── NAVIGATION ── -->
+    <nav class="nav">
+        <div class="nav__brand">
+            <a href="home.html" class="nav__logo">H</a>
+            <span class="nav__name">HelpHub AI</span>
+        </div>
+        <ul class="nav__links">
+            <li><a href="dashboard.html" class="nav__link">Dashboard</a></li>
+            <li><a href="create-request.html" class="nav__link">Create Request</a></li>
+            <li><a href="ai-center.html" class="nav__link nav__link--active">AI Center</a></li>
+        </ul>
+    </nav>
+
+    <div class="nav-divider"></div>
+
+    <main class="main">
+
+        <!-- ── HERO BANNER ── -->
+        <section class="hero">
+            <p class="hero__eyebrow">AI CENTER</p>
+            <h1 class="hero__title">See what the platform intelligence is<br>noticing.</h1>
+            <p class="hero__sub">AI-like insights summarize demand trends, helper readiness, urgency signals, and
+                request recommendations.</p>
+        </section>
+
+        <!-- ── STAT CARDS ROW ── -->
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <p class="stat-card__eyebrow">TREND PULSE</p>
+                <h2 class="stat-card__value stat-card__value--text">Web Development</h2>
+                <p class="stat-card__desc">Most common support area based on active community requests.</p>
+            </div>
+
+            <div class="stat-card">
+                <p class="stat-card__eyebrow">URGENCY WATCH</p>
+                <h2 class="stat-card__value">1</h2>
+                <p class="stat-card__desc">Requests currently flagged high priority by the urgency detector.</p>
+            </div>
+
+            <div class="stat-card">
+                <p class="stat-card__eyebrow">MENTOR POOL</p>
+                <h2 class="stat-card__value">2</h2>
+                <p class="stat-card__desc">Trusted helpers with strong response history and contribution signals.</p>
+            </div>
+
+        </div>
+
+        <!-- ── RECOMMENDATIONS CARD ── -->
+        <section class="reco-card">
+            <p class="reco-card__eyebrow">AI RECOMMENDATIONS</p>
+            <h2 class="reco-card__title">Requests needing attention</h2>
+
+            <ul class="reco-list">
+
+                <li class="reco-item">
+                    <p class="reco-item__title">Need help making my portfolio responsive before demo day</p>
+                    <p class="reco-item__desc">Responsive layout issue with a short deadline. Best helpers are frontend
+                        mentors comfortable with CSS grids and media queries.</p>
+                    <div class="reco-item__tags">
+                        <span class="tag tag--category">Web Development</span>
+                        <span class="tag tag--high">High</span>
+                    </div>
+                </li>
+
+                <li class="reco-item">
+                    <p class="reco-item__title">Looking for Figma feedback on a volunteer event poster</p>
+                    <p class="reco-item__desc">A visual design critique request where feedback on hierarchy, spacing,
+                        and messaging would create the most value.</p>
+                    <div class="reco-item__tags">
+                        <span class="tag tag--category">Design</span>
+                        <span class="tag tag--medium">Medium</span>
+                    </div>
+                </li>
+
+                <li class="reco-item">
+                    <p class="reco-item__title">Need mock interview support for internship applications</p>
+                    <p class="reco-item__desc">Career coaching request focused on confidence-building, behavioral
+                        answers, and entry-level frontend interviews.</p>
+                    <div class="reco-item__tags">
+                        <span class="tag tag--category">Career</span>
+                        <span class="tag tag--low">Low</span>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
